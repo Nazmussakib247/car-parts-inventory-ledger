@@ -1,0 +1,1 @@
+ALTER TABLE `reminder_settings` MODIFY COLUMN `messageTemplate` text NOT NULL DEFAULT ('Due reminder: {{customerName}}, outstanding {{amount}}.');
