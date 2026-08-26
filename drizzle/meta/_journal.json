@@ -1,0 +1,62 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1787302476278,
+      "tag": "0000_spicy_zuras",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1787302682547,
+      "tag": "0001_strong_human_fly",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1787317196540,
+      "tag": "0002_tense_night_nurse",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1787317478949,
+      "tag": "0003_fixed_eternity",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1787317821458,
+      "tag": "0004_massive_misty_knight",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1787317860547,
+      "tag": "0005_solid_absorbing_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1787318276799,
+      "tag": "0006_cloudy_husk",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1787721754046,
+      "tag": "0007_sticky_princess_powerful",
+      "breakpoints": true
+    }
+  ]
+}
