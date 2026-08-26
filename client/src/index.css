@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --color-background: #f7f9fc;
+  --color-foreground: #10243f;
+  --color-card: #ffffff;
+  --color-card-foreground: #10243f;
+  --color-primary: #ef8354;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #edf5ff;
+  --color-secondary-foreground: #10243f;
+  --color-muted: #f1f4f8;
+  --color-muted-foreground: #718096;
+  --color-accent: #fff2ec;
+  --color-accent-foreground: #d85f32;
+  --color-border: #e4eaf1;
+  --color-input: #e4eaf1;
+  --color-ring: #ef8354;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+}
+
+:root { font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif; color: #10243f; background: #f7f9fc; font-synthesis: none; text-rendering: optimizeLegibility; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: #f7f9fc; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+h1, h2, h3, h4 { font-family: "Space Grotesk", "DM Sans", sans-serif; }
+::selection { background: #ffd7c6; color: #10243f; }
+
+@media print {
+  aside, header, button, input, select { display: none !important; }
+  main { padding-left: 0 !important; }
+  body { background: white; }
+  .border, .shadow\[0_8px_30px_rgba\(15\,35\,60\,\.04\)\] { box-shadow: none !important; }
+}
+
+/* Final keyboard accessibility pass */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(239, 131, 84, 0.45);
+  outline-offset: 3px;
+}
+
+@media print {
+  button, a, input, select, textarea { outline: none !important; }
+}
+
+@media print {
+  .thermal-58 { width: 58mm; }
+  .thermal-80 { width: 80mm; }
+  .invoice-print { width: 210mm; min-height: 297mm; }
+  body { background: white !important; }
+}
+@page { size: auto; margin: 10mm; }
+
+/* Professional invoice PDF / A4 print system */
+.invoice-print { font-family: "DM Sans", "Noto Sans Bengali", ui-sans-serif, sans-serif; }
+.invoice-print .invoice-items { page-break-inside: auto; }
+.invoice-print .invoice-items tr { page-break-inside: avoid; page-break-after: auto; }
+.invoice-print .invoice-items thead { display: table-header-group; }
+.invoice-print h1, .invoice-print h2 { font-family: "Space Grotesk", "Noto Sans Bengali", sans-serif; }
+@media print {
+  @page { size: A4; margin: 12mm 12mm 14mm; }
+  body:has(.invoice-print) { background: white !important; }
+  body:has(.invoice-print) main { padding: 0 !important; }
+  body:has(.invoice-print) .invoice-print { width: 186mm; min-height: 269mm; margin: 0; overflow: visible; }
+  body:has(.invoice-print) .invoice-print > div:first-child { margin-left: -12mm; margin-right: -12mm; }
+  body:has(.invoice-print) .invoice-print footer { page-break-inside: avoid; }
+  .invoice-print { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .invoice-print .bg-slate-50\/70, .invoice-print .bg-rose-50 { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
